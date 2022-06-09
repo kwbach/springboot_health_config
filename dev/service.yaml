@@ -3,9 +3,9 @@ kind: Service
 metadata:
   annotations:
   labels:
-    app: demo
-  name: demo
-  namespace: web
+    app: spring-svc
+  name: spring-svc
+  namespace: spring
 spec:
   clusterIP: 10.100.169.90
   clusterIPs:
@@ -19,6 +19,6 @@ spec:
     protocol: TCP
     targetPort: 8080
   selector:
-    app: demo
+    app: spring-health
   sessionAffinity: None
   type: ClusterIP
