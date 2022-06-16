@@ -19,7 +19,9 @@ spec:
         app: spring-health
     spec:
       containers:
-        - image: kbachman/kubernetes:322cd67
+        - image: docker.io/kbachman/kubernetes:322cd67
           name: kubernetes
           resources: {}
+      imagePullSecrets:
+        - name: regsecret
 status: {}
